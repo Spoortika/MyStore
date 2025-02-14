@@ -2,6 +2,7 @@
     display:flex;
     justify-content: space-between;
     padding: 10px;
+    background-color: rgb(238, 220, 203);
 }
 .row {
     display:flex;
@@ -14,7 +15,7 @@
     border-radius: 20px;
     padding: 20px;
     margin: 20px;
-    background-color:bisque;
+   
 }
 .menu{
     display:flex;
