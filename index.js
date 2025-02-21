@@ -41,6 +41,14 @@ const showTotal = () => {
   order.innerHTML = total;
 };
 
+const summary=()=>{
+  let count = Object.keys(cart).length;
+  let str="<div>";
+  str+=`
+  ${value.id} . ${value.name} -->${count}
+  </div>`
+  divProducts.innerHTML=str;
+}
 const showCart = () => {
   let count = Object.keys(cart).length;
   items.innerHTML = count;
@@ -49,11 +57,11 @@ const showCart = () => {
   products.map((value) => {
     if (cart[value.id]) {
       str += `<div>
-      ${value.id}-${value.name}-${value.price}-
+      ${value.id} . ${value.name} - $${value.price} -
       <button onclick='decrement(${value.id})'>-</button>
       ${cart[value.id]}
       <button onclick='increment(${value.id})'>+</button>
-      -${value.price * cart[value.id]}
+      - $${value.price * cart[value.id]}
       -<button onclick='deleteCart(${value.id})'>Delete</button>
       </div>`;
     }
